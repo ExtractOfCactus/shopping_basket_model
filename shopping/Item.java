@@ -9,4 +9,8 @@ public abstract class Item {
     this.value = value;
   }
 
+  public String getBrand() {
+    return this.brand;
+  }
+
 }

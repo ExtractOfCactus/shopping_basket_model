@@ -7,6 +7,11 @@ public class BreadTest {
 
   @Before
   public void before() {
-    bread = new Bread("Warbaton's", 2, "White")
+    bread = new Bread("Warbaton's", 2, "White");
+  }
+
+  @Test
+  public void canGetBreadBrand() {
+    assertEquals("Warbaton's", bread.getBrand());
   }
 }
