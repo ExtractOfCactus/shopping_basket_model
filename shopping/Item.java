@@ -1,12 +1,12 @@
 package shopping;
 
 public abstract class Item {
-  String brand;
-  int value;
+  protected String brand;
+  protected int value;
 
   public Item(String brand, int value) {
     this.brand = brand;
     this.value = value;
   }
-  
+
 }
