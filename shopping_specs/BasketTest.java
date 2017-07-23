@@ -69,4 +69,14 @@ public class BasketTest{
     basket.add(chocolateBar);
     assertEquals(2700, basket.tenPercentOff());
   }
+
+  @Test
+  public void canGetLoyaltyDiscount(){
+    basket.add(milk);
+    basket.add(bread);
+    basket.add(bread);
+    basket.add(bread);
+    basket.add(chocolateBar);
+    assertEquals(2646, basket.loyaltyDiscount());
+  }
 }

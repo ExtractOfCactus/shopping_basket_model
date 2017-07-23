@@ -53,7 +53,7 @@ public class Basket {
 
   public int tenPercentOff() {
     int newValue = bogofDiscount();
-    if (newValue > 20) {
+    if (newValue > 2000) {
       newValue -= (newValue / 10); 
     }
     return newValue;
