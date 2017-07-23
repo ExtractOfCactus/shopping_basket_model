@@ -26,6 +26,7 @@ public class Basket {
     contents.clear();
   }
 
+
   public int initialValue() {
     int total = 0;
     for (Item item : contents) {
@@ -34,13 +35,18 @@ public class Basket {
     return total;
   }
 
-  public int bogofDiscount() {
-    int newValue = initialValue();
+  public HashMap<Item, Integer> setUpItemFrequencies() {
     HashMap<Item, Integer> countMap = new HashMap<>();
     for (Item item : contents) {
       Integer itemCount = Collections.frequency(contents, item);
       countMap.put(item, itemCount);
     }
+    return countMap;
+  }
+
+  public int bogofDiscount() {
+    int newValue = initialValue();
+    HashMap<Item, Integer> countMap = setUpItemFrequencies();
     for (Item item : contents) {
       int discounter = 0;
       if (countMap.get(item) / 2 >= 1) {
