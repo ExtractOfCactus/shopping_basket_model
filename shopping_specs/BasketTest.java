@@ -8,11 +8,18 @@ public class BasketTest{
 
   @Before
   public void before() {
+    milk = new Milk("Tesco whole milk", 5, "Full fat");
     basket = new Basket();
   }
 
   @Test
   public void basketStartsEmpty() {
     assertEquals(0, basket.getContents().size());
+  }
+
+  @Test
+  public void canAddItemToBasket() {
+    basket.add(milk);
+    assertEquals(1, basket.getContents.size());
   }
 }
