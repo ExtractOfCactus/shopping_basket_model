@@ -59,4 +59,17 @@ public class Basket {
     return newValue;
   }
 
+  public boolean customerHasLoyaltyCard() {
+    return true;
+  }
+
+  public int loyaltyDiscount() {
+    int newValue = tenPercentOff();
+    if (customerHasLoyaltyCard()) {
+      int discount = (newValue / 100) * 2;
+      newValue -= discount;
+    }
+    return newValue;
+  }
+
 }
