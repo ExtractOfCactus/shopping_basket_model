@@ -11,7 +11,7 @@ public class BasketTest{
   @Before
   public void before() {
     bread = new Bread("Warbaton's Toastie", 5, "White");
-    milk = new Milk("Tesco whole milk", 5, "Full fat");
+    milk = new Milk("Tesco whole milk", 4, "Full fat");
     basket = new Basket();
   }
 
@@ -39,5 +39,12 @@ public class BasketTest{
     basket.add(bread);
     basket.empty();
     assertEquals(true, basket.getContents().isEmpty());
+  }
+
+  @Test
+  public void canGetValueOfBasket() {
+    basket.add(milk);
+    basket.add(bread);
+    assertEquals(9, basket.totalValue());
   }
 }
