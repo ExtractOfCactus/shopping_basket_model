@@ -43,10 +43,18 @@ public class Basket {
     }
     for (Item item : contents) {
       int discounter = 0;
-      if (countMap.get(item)/2 >= 1) {
+      if (countMap.get(item) / 2 >= 1) {
         newValue -= item.getValue();
         countMap.put(item, (countMap.get(item) - 2));
       }
+    }
+    return newValue;
+  }
+
+  public int tenPercentOff() {
+    int newValue = bogofDiscount();
+    if (newValue > 20) {
+      newValue -= (newValue / 10); 
     }
     return newValue;
   }
