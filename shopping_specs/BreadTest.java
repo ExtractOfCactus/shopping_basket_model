@@ -19,4 +19,9 @@ public class BreadTest {
   public void canGetValue() {
     assertEquals(2, bread.getValue());
   }
+
+  @Test
+  public void canGetType() {
+    assertEquals("White", bread.getType());
+  }
 }
