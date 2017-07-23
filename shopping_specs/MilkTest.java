@@ -14,4 +14,9 @@ public class MilkTest {
   public void canGetName() {
     assertEquals("Tesco whole milk", milk.getName());
   }
+
+  @Test
+  public void canGetValue() {
+    assertEquals(5, milk.getValue());
+  }
 }
