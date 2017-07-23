@@ -7,4 +7,8 @@ public class Milk extends Item {
     super(name, value);
     this.fatContent = fatContent;
   }
+
+  public String getFatContent() {
+    return this.fatContent;
+  }
 }
