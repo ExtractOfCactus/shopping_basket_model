@@ -17,8 +17,4 @@ public abstract class Item {
     return this.value;
   }
 
-  public void setValue(int newValue) {
-    this.value = newValue;
-  }
-
 }

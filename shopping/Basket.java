@@ -35,19 +35,20 @@ public class Basket {
   }
 
   // public int bogofDiscount() {
+  //   int newValue = initialValue();
   //   HashMap<Item, Integer> countMap = new HashMap<>();
   //   for (Item item : contents) {
   //     Integer itemCount = Collections.frequency(contents, item);
   //     countMap.put(item, itemCount);
   //   }
   //   for (Item item : contents) {
-  //     int discounter = 0
+  //     int discounter = 0;
   //     if (countMap.get(item)/2 >= 1) {
-  //       item.setValue(0);
+  //       newValue -= item.getValue();
   //       countMap.put(item, (countMap.get(item) - 2));
   //     }
-  //     return initialValue();
   //   }
+  //   return newValue;
   // }
 
 }

@@ -55,6 +55,6 @@ public class BasketTest{
   //   basket.add(bread);
   //   basket.add(bread);
   //   assertEquals(19, basket.initialValue());
-  //   assertEquals(14, basket.totalValue());
+  //   assertEquals(14, basket.bogofDiscount());
   // }
 }
