@@ -19,4 +19,9 @@ public class MilkTest {
   public void canGetValue() {
     assertEquals(5, milk.getValue());
   }
+
+  @Test
+  public void canGetFatContent() {
+    assertEquals("Full fat", milk.getFatContent());
+  }
 }
