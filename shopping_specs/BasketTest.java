@@ -48,13 +48,13 @@ public class BasketTest{
     assertEquals(9, basket.initialValue());
   }
 
-  // @Test
-  // public void hasBogofDiscount() {
-  //   basket.add(milk);
-  //   basket.add(bread);
-  //   basket.add(bread);
-  //   basket.add(bread);
-  //   assertEquals(19, basket.initialValue());
-  //   assertEquals(14, basket.bogofDiscount());
-  // }
+  @Test
+  public void hasBogofDiscount() {
+    basket.add(milk);
+    basket.add(bread);
+    basket.add(bread);
+    basket.add(bread);
+    assertEquals(19, basket.initialValue());
+    assertEquals(14, basket.bogofDiscount());
+  }
 }

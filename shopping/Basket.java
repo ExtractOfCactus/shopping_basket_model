@@ -34,21 +34,21 @@ public class Basket {
     return total;
   }
 
-  // public int bogofDiscount() {
-  //   int newValue = initialValue();
-  //   HashMap<Item, Integer> countMap = new HashMap<>();
-  //   for (Item item : contents) {
-  //     Integer itemCount = Collections.frequency(contents, item);
-  //     countMap.put(item, itemCount);
-  //   }
-  //   for (Item item : contents) {
-  //     int discounter = 0;
-  //     if (countMap.get(item)/2 >= 1) {
-  //       newValue -= item.getValue();
-  //       countMap.put(item, (countMap.get(item) - 2));
-  //     }
-  //   }
-  //   return newValue;
-  // }
+  public int bogofDiscount() {
+    int newValue = initialValue();
+    HashMap<Item, Integer> countMap = new HashMap<>();
+    for (Item item : contents) {
+      Integer itemCount = Collections.frequency(contents, item);
+      countMap.put(item, itemCount);
+    }
+    for (Item item : contents) {
+      int discounter = 0;
+      if (countMap.get(item)/2 >= 1) {
+        newValue -= item.getValue();
+        countMap.put(item, (countMap.get(item) - 2));
+      }
+    }
+    return newValue;
+  }
 
 }
