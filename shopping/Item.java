@@ -13,4 +13,8 @@ public abstract class Item {
     return this.brand;
   }
 
+  public int getValue() {
+    return this.value;
+  }
+
 }
