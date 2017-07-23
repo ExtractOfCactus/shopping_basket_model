@@ -7,4 +7,8 @@ public class Bread extends Item {
     super(brand, value);
     this.type = type;
   }
+
+  public String getType() {
+    return this.type;
+  }
 }
