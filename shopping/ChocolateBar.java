@@ -7,4 +7,8 @@ public class ChocolateBar extends Item {
     super(name, value);
     this.type = type;
   }
+
+  public String getType() {
+    return this.type;
+  }
 }
