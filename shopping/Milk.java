@@ -3,8 +3,8 @@ package shopping;
 public class Milk extends Item {
   private String fatContent;
 
-  public Milk(String brand, int value, String fatContent) {
-    super(brand, value);
+  public Milk(String name, int value, String fatContent) {
+    super(name, value);
     this.fatContent = fatContent;
   }
 }

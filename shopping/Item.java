@@ -1,16 +1,16 @@
 package shopping;
 
 public abstract class Item {
-  protected String brand;
+  protected String name;
   protected int value;
 
-  public Item(String brand, int value) {
-    this.brand = brand;
+  public Item(String name, int value) {
+    this.name = name;
     this.value = value;
   }
 
-  public String getBrand() {
-    return this.brand;
+  public String getName() {
+    return this.name;
   }
 
   public int getValue() {
