@@ -19,4 +19,9 @@ public class ChocolateBarTest {
   public void canGetValue() {
     assertEquals(3, chocolateBar.getValue());
   }
+
+  @Test
+  public void canGetType() {
+    assertEquals("Milk chocolate", chocolateBar.getType());
+  }
 }
