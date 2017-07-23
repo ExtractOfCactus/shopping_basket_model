@@ -21,6 +21,12 @@ public class BreadTest {
   }
 
   @Test
+  public void canSetValue() {
+    bread.setValue(2);
+    assertEquals(2, bread.getValue());
+  }
+
+  @Test
   public void canGetType() {
     assertEquals("White", bread.getType());
   }
