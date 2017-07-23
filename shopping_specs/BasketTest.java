@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class BasketTest{
   Basket basket;
+  Milk milk;
 
   @Before
   public void before() {
@@ -20,6 +21,6 @@ public class BasketTest{
   @Test
   public void canAddItemToBasket() {
     basket.add(milk);
-    assertEquals(1, basket.getContents.size());
+    assertEquals(1, basket.getContents().size());
   }
 }

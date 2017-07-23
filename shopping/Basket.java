@@ -12,4 +12,8 @@ public class Basket {
     return this.contents;
   }
 
+  public void add(Item item) {
+    contents.add(item);
+  }
+
 }
