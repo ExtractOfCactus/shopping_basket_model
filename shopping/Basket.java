@@ -16,4 +16,8 @@ public class Basket {
     contents.add(item);
   }
 
+  public void remove(Item item) {
+    contents.remove(item);
+  }
+
 }
