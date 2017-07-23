@@ -20,4 +20,8 @@ public class Basket {
     contents.remove(item);
   }
 
+  public void empty() {
+    contents.clear();
+  }
+
 }

@@ -37,6 +37,7 @@ public class BasketTest{
   public void canEmptyBasket() {
     basket.add(milk);
     basket.add(bread);
+    basket.empty();
     assertEquals(true, basket.getContents().isEmpty());
   }
 }
