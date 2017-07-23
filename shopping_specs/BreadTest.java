@@ -14,4 +14,9 @@ public class BreadTest {
   public void canGetBreadBrand() {
     assertEquals("Warbaton's", bread.getBrand());
   }
+
+  @Test 
+  public void canGetValue() {
+    assertEquals(2, bread.getValue());
+  }
 }
