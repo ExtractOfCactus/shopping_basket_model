@@ -7,11 +7,13 @@ public class BasketTest{
   Basket basket;
   Milk milk;
   Bread bread;
+  ChocolateBar chocolateBar;
 
   @Before
   public void before() {
     bread = new Bread("Warbaton's Toastie", 5, "White");
     milk = new Milk("Tesco whole milk", 4, "Full fat");
+    chocolateBar = new ChocolateBar("Dairy Milk", 16, "Milk chocolate");
     basket = new Basket();
   }
 
@@ -56,5 +58,15 @@ public class BasketTest{
     basket.add(bread);
     assertEquals(19, basket.initialValue());
     assertEquals(14, basket.bogofDiscount());
+  }
+
+  @Test
+  public void canGetValueTotalDiscount() {
+    basket.add(milk);
+    basket.add(bread);
+    basket.add(bread);
+    basket.add(bread);
+    basket.add(chocolateBar);
+    assertEquals(27, basket.tenPercentOff());
   }
 }
