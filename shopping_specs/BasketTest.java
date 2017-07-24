@@ -56,7 +56,6 @@ public class BasketTest{
     basket.add(bread);
     basket.add(bread);
     basket.add(bread);
-    assertEquals(1900, basket.initialValue());
     assertEquals(500, basket.bogofDiscount());
   }
 
