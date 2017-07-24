@@ -14,12 +14,17 @@ public class BasketTest{
     bread = new Bread("Warbaton's Toastie", 500, "White");
     milk = new Milk("Tesco whole milk", 400, "Full fat");
     chocolateBar = new ChocolateBar("Dairy Milk", 1600, "Milk chocolate");
-    basket = new Basket();
+    basket = new Basket(true);
   }
 
   @Test
   public void basketStartsEmpty() {
     assertEquals(0, basket.getContents().size());
+  }
+
+  @Test 
+  public void canGetLoyaltyCard() {
+    assertEquals(true, basket.getLoyaltyCard());
   }
 
   @Test

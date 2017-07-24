@@ -15,7 +15,7 @@ public class CheckoutTest{
     bread = new Bread("Warbaton's Toastie", 500, "White");
     milk = new Milk("Tesco whole milk", 400, "Full fat");
     chocolateBar = new ChocolateBar("Dairy Milk", 1600, "Milk chocolate");
-    basket = new Basket();
+    basket = new Basket(true);
     checkout = new Checkout(basket);
   }
 

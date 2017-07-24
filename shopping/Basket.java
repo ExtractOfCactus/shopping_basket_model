@@ -5,13 +5,20 @@ import java.util.Collections;
 
 public class Basket {
   private ArrayList<Item> contents;
+  private Boolean loyaltyCard;
 
-  public Basket() {
+  public Basket(Boolean loyaltyCard) {
     this.contents = new ArrayList<>();
+    this.loyaltyCard = loyaltyCard;
+
   }
 
   public ArrayList getContents() {
     return this.contents;
+  }
+
+  public Boolean getLoyaltyCard() {
+    return this.loyaltyCard;
   }
 
   public void add(Item item) {

@@ -52,7 +52,7 @@ public class Checkout {
   }
 
   public boolean customerHasLoyaltyCard() {
-    return true;
+    return basket.getLoyaltyCard();
   }
 
   public int loyaltyDiscount(int total) {
