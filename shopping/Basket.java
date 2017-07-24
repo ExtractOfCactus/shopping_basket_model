@@ -1,7 +1,5 @@
 package shopping;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Collections;
 
 public class Basket {
   private ArrayList<Item> contents;
