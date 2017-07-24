@@ -57,7 +57,7 @@ public class BasketTest{
     basket.add(bread);
     basket.add(bread);
     assertEquals(1900, basket.initialValue());
-    assertEquals(1400, basket.bogofDiscount());
+    assertEquals(500, basket.bogofDiscount());
   }
 
   @Test
@@ -67,7 +67,7 @@ public class BasketTest{
     basket.add(bread);
     basket.add(bread);
     basket.add(chocolateBar);
-    assertEquals(2700, basket.tenPercentOff());
+    assertEquals(350, basket.tenPercentOff(basket.initialValue()));
   }
 
   @Test
@@ -77,6 +77,6 @@ public class BasketTest{
     basket.add(bread);
     basket.add(bread);
     basket.add(chocolateBar);
-    assertEquals(2646, basket.loyaltyDiscount());
+    assertEquals(70, basket.loyaltyDiscount(basket.initialValue()));
   }
 }

@@ -45,37 +45,45 @@ public class Basket {
   }
 
   public int bogofDiscount() {
-    int newValue = initialValue();
+    int discount = 0;
     HashMap<Item, Integer> countMap = setUpItemFrequencies();
     for (Item item : contents) {
-      int discounter = 0;
       if (countMap.get(item) / 2 >= 1) {
-        newValue -= item.getValue();
+        discount += item.getValue();
         countMap.put(item, (countMap.get(item) - 2));
       }
     }
-    return newValue;
+    return discount;
   }
 
-  public int tenPercentOff() {
-    int newValue = bogofDiscount();
-    if (newValue > 2000) {
-      newValue -= (newValue / 10); 
+  public int tenPercentOff(int total) {
+    if (total > 2000) {
+      int discount = (total / 10); 
+      return discount;
     }
-    return newValue;
+    return 0;
   }
 
   public boolean customerHasLoyaltyCard() {
     return true;
   }
 
-  public int loyaltyDiscount() {
-    int newValue = tenPercentOff();
+  public int loyaltyDiscount(int total) {
     if (customerHasLoyaltyCard()) {
-      int discount = (newValue / 100) * 2;
-      newValue -= discount;
+      int discount = (total / 100) * 2;
+      return discount;
     }
-    return newValue;
+   return 0; 
   }
 
+  // public int finalTotal() {
+  //   int total = initialValue();
+  //   total -= bogofDiscount(total);
+  //   total -= tenPercentOff(total);
+  //   total -= loyaltyDiscount(total);
+  //   return total;
+  // }
+
+
+// marker marker marker!!
 }
