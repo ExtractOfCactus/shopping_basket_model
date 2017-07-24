@@ -76,14 +76,12 @@ public class Basket {
    return 0; 
   }
 
-  // public int finalTotal() {
-  //   int total = initialValue();
-  //   total -= bogofDiscount(total);
-  //   total -= tenPercentOff(total);
-  //   total -= loyaltyDiscount(total);
-  //   return total;
-  // }
+  public int finalTotal() {
+    int total = initialValue();
+    total -= bogofDiscount();
+    total -= tenPercentOff(total);
+    total -= loyaltyDiscount(total);
+    return total;
+  }
 
-
-// marker marker marker!!
 }
